@@ -1,0 +1,334 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Philosopher&display=swap');
+
+
+/* Alteração do Box Model para border-box */
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+main {
+    line-height: 1.5;
+    text-align: justify;
+    background-color: white;
+}
+
+h2, p {
+    padding: 1px 0;
+}
+
+h3 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+header, footer {
+    text-align: center;    
+}
+
+header {
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(orange ,rgba(255, 68, 0, 0.829));
+    border-bottom: 1px solid black;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1, nav {
+    margin: auto;
+}
+
+h1, h1 a, nav, nav ul, nav li, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 a {
+    font-size: 2.2rem;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #F7F7F7
+}
+
+h1 img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
+}
+
+nav ul {
+    width: 90%;
+    justify-content: space-around;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 60px;
+    padding: 5px;
+    font-family: 'Philosopher', sans-serif;
+    color: #F7F7F7;
+}
+
+article {
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+section {
+    margin-top: 10px;
+}
+
+footer {
+    background: linear-gradient(orange ,rgba(255, 68, 0, 0.829));
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+footer h2, footer p {
+    color: white;
+}
+
+footer h2 {
+    font-size: 1rem;
+    font-family: 'Philosopher', sans-serif;
+}
+
+footer p {
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: 'Philosopher', sans-serif;
+}
+
+footer img {
+    width: 30px;
+    margin: 2px 0;
+}
+
+input, textarea {
+    border: 1.2px solid;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 1%;
+    margin-top: 5px;
+}
+
+#dados-pessoais, #endereco-pessoal {
+    padding: 20px 0;
+}
+
+section>p {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+form div {
+    font-family: 'Philosopher', sans-serif;
+    padding: 5px 0;
+}
+
+input, textarea {
+    padding: 5px 8px;
+}
+
+label span {
+    color: orange;
+}
+
+#botao-cep {
+    margin-top: 5px;
+}
+
+#botao-enviar {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+#enviar {
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    font-family: 'Philosopher', sans-serif;
+    color: #F7F7F7;
+    background: linear-gradient(orange ,rgba(255, 68, 0, 0.829));
+    font-size: .9rem;
+    border-radius: 20px;
+}
+
+#enviar:hover, #enviar:focus {
+    box-shadow: 1px 1px 5px 1px #909090;
+    cursor: pointer;
+}
+
+.campo-cep {
+    position: relative;
+}
+
+#botao-cep {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 2px;
+    top: 30px;
+    cursor: pointer;
+}
+
+#botao-cep img {    
+    height: initial;
+}
+
+#formulario {
+    position: relative;
+ }
+
+ .form-load:after {
+    content: "";
+    background-image: url(../img/loading.gif);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    /* left: 0; */
+    right: 50px;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.61); */
+    background-position-y: 10%;
+ }
+
+@media screen and (min-width: 650px) {
+    nav {
+        width: 95%;
+    }
+
+    nav ul {
+        justify-content: space-between;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    article {
+        width: 90%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    .form-load:after {
+        right: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.61);
+    }
+}
+
+@media screen and (min-width: 750px) {
+    nav a {
+        font-size: 1.6rem;
+    }
+
+    section>p {
+        width: 80%;
+        margin: auto;
+    }
+
+     #formulario {
+         width: 80%;
+         margin: auto;
+     }
+}
+
+@media screen and (min-width: 1000px) {
+    header {
+        position: fixed;
+        z-index: 300;
+        top: 0;
+    }
+
+    .menu-site {
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    h1 {
+        width: 30%;
+    }
+
+    nav {
+        width: 60%;
+    }
+
+    #contato {
+        padding-top: 110px;
+    }
+
+    article {
+        width: 80%;
+    }
+
+    section>p {
+        width: 60%;
+    }
+
+    footer img {
+        filter: grayscale(100%);
+    }
+
+    footer img:hover {
+        filter: grayscale(0);
+    }
+
+    #formulario {
+        width: 60%;
+    } 
+}
